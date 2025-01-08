@@ -2540,14 +2540,14 @@ label {
 }
 
 
-
 .hero__depo-logo {
     z-index: 2;
     width: 1.82rem;
     height: 100%;
-    align-items: flex-end;
     display: flex;
-    position: relative
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    position: relative;
 }
 
 .hero__middle {
