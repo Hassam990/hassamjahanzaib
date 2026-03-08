@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1",
+    "title": "Pixels Perfect Creation",
+    "category": "Marketing Agency",
+    "description": "A comprehensive marketing agency website built with performance and design in mind.",
+    "link": "http://pixelsperfectcreation.co.uk/",
+    "images": [
+      "/assets/bruce.jpg"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2026-03-08T11:33:19.693Z"
+  },
+  {
+    "id": "2",
+    "title": "Atlanta True Cars",
+    "category": "Cars Selling Web",
+    "description": "An interactive and engaging platform for buying and selling cars in Atlanta.",
+    "link": "https://atlantatruecars.com/",
+    "images": [
+      "/assets/at.jpg"
+    ],
+    "createdAt": "2024-01-02T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "title": "CH Legal Solutions",
+    "category": "Law Firm",
+    "description": "Professional and trustworthy web presence for a law firm.",
+    "link": "https://chlegalsolutions.com/",
+    "images": [
+      "/assets/ch.jpg"
+    ],
+    "createdAt": "2024-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "title": "Anime",
+    "category": "Website Design",
+    "description": "A visually stunning streaming layout designed for anime enthusiasts.",
+    "link": "https://hassam990.github.io/live-index/",
+    "images": [
+      "/assets/anime.jpg"
+    ],
+    "createdAt": "2024-01-04T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "title": "A&B Joinery",
+    "category": "Joinery Website",
+    "description": "Showcase of custom woodwork and joinery projects.",
+    "link": "https://abjoineryfalkirk.com/",
+    "images": [
+      "/assets/A&b.jpg"
+    ],
+    "createdAt": "2024-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "6",
+    "title": "Spline 3D",
+    "category": "Portfolio",
+    "description": "An interactive 3D web experience built with Spline.",
+    "link": "https://hassam990.github.io/Splinetest/",
+    "images": [
+      "/assets/spline.jpg"
+    ],
+    "createdAt": "2024-01-06T00:00:00.000Z"
+  },
+  {
+    "id": "7",
+    "title": "Behance",
+    "category": "Portfolio",
+    "description": "Link to my official Behance design portfolio.",
+    "link": "https://www.behance.net/hassam99",
+    "images": [
+      "/assets/b1.jpg"
+    ],
+    "createdAt": "2024-01-07T00:00:00.000Z"
+  },
+  {
+    "id": "145936af-bc43-443c-8fb0-c99f2c19e425",
+    "title": "TEst",
+    "category": "TEst",
+    "description": "TEst",
+    "link": "https://ssconsultant.com.pk/",
+    "images": [
+      "/uploads/1772970727533-68667097.png"
+    ],
+    "createdAt": "2026-03-08T11:52:07.538Z"
+  }
+]

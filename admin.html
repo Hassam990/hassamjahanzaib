@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Manage Cases</a></li>
+                <li><a href="index.html">View Website</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Manage Cases</h1>
+                <button id="addCaseBtn" class="btn btn-primary">+ Add New Case</button>
+            </header>
+
+            <section class="cases-table-section">
+                <table id="casesTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="casesTableBody">
+                        <!-- Rows dynamically populated by JS -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add/Edit Case Modal -->
+    <div id="caseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Add New Case</h2>
+
+            <form id="caseForm">
+                <input type="hidden" id="caseId">
+                <input type="hidden" id="existingImagesInput">
+
+                <div class="form-group">
+                    <label for="title">Project Title (e.g. Anime Streaming)</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category (e.g. Website Design)</label>
+                    <input type="text" id="category" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link">Project Link</label>
+                    <input type="url" id="link" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="images">Upload Images (Hold Ctrl/Cmd to select multiple)</label>
+                    <input type="file" id="images" accept="image/*" multiple>
+                    <div id="imagePreviewContainer" class="image-preview-container">
+                        <!-- Existing images shown here during edit -->
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="saveCaseBtn">Save Case</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Alert Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
