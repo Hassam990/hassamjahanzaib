@@ -77,7 +77,7 @@ app.get('/api/cases/:id', (req, res) => {
 app.post('/api/cases', upload.array('images', 10), (req, res) => {
     try {
         const { title, category, description, link } = req.body;
-        const images = req.files ? req.files.map(f => `/uploads/${f.filename}`) : [];
+        const images = req.files ? req.files.map(f => `uploads/${f.filename}`) : [];
 
         const newCase = {
             id: uuidv4(),
@@ -111,7 +111,7 @@ app.put('/api/cases/:id', upload.array('newImages', 10), (req, res) => {
         }
 
         const { title, category, description, link, existingImages } = req.body;
-        
+
         // Parse existing images that were kept
         let finalImages = [];
         if (existingImages) {
@@ -154,7 +154,7 @@ app.delete('/api/cases/:id', (req, res) => {
     try {
         const cases = getCases();
         const index = cases.findIndex(c => c.id === req.params.id);
-        
+
         if (index === -1) {
             return res.status(404).json({ error: 'Case not found' });
         }

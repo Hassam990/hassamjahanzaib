@@ -68,7 +68,7 @@
         }
     </style>
 
-    <link rel="stylesheet" href="depo-studio.vercel.app/main-style-main.css">
+    <link rel="stylesheet" href="https://depo-studio.vercel.app/main-style-main.css">
     <script defer type="module" src="https://depo-studio.vercel.app/main.js"></script>
     <!--<script defer type="module" src="http://localhost:5173/src/main.js"></script>-->
 </head>
@@ -2043,17 +2043,29 @@
                 document.addEventListener('DOMContentLoaded', async () => {
                     const grid = document.getElementById('dynamic-cases-grid');
                     const API_URL = 'http://localhost:3000/api/cases';
+                    const STATIC_DATA_URL = 'data/cases.json';
 
                     let allCases = [];
 
                     try {
-                        const res = await fetch(API_URL);
-                        if (!res.ok) throw new Error('API down or not running');
+                        let res;
+                        try {
+                            res = await fetch(API_URL);
+                        } catch (e) {
+                            console.warn('API not reachable, falling back to static data');
+                        }
+
+                        if (!res || !res.ok) {
+                            res = await fetch(STATIC_DATA_URL);
+                        }
+
+                        if (!res.ok) throw new Error('Both API and static data are unavailable');
+
                         allCases = await res.json();
                         renderFrontCases(allCases);
                     } catch (error) {
-                        console.error('Failed to load dynamic cases, make sure Node backend is running', error);
-                        grid.innerHTML = '<div style="text-align: center; grid-column: 1/-1; color: red;">Backend server is not running. Please run `node server.js` to see projects.</div>';
+                        console.error('Failed to load project cases', error);
+                        grid.innerHTML = '<div style="text-align: center; grid-column: 1/-1; color: red;">Failed to load projects.</div>';
                     }
 
                     function renderFrontCases(cases) {
