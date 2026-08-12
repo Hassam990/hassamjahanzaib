@@ -24,24 +24,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         return 'https://api.microlink.io/?url=' + encodeURIComponent(url) + '&screenshot=true&meta=false&embed=screenshot.url';
     }
 
+    // ── arrow SVG ─────────────────────────────────────────────
+    var arrowSVG =
+        '<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+            '<path d="M2.26 37.74L37.74 2.26" stroke="white" stroke-width="2" stroke-linecap="round"/>' +
+            '<path d="M2.26 2.26L37.74 2.26L37.74 37.74" stroke="white" stroke-width="2" stroke-linecap="round"/>' +
+        '</svg>';
+
     // ── render ────────────────────────────────────────────────
     function renderAll(cases) {
-        const featured = cases.filter(function(c) { return c.featured; });
-        const regular  = cases.filter(function(c) { return !c.featured; });
+        var featured = cases.filter(function(c) { return c.featured; });
+        var regular  = cases.filter(function(c) { return !c.featured; });
 
-        // Featured row
+        // Featured row — clicking opens project in new tab
         if (featGrid) {
             featGrid.innerHTML = '';
             featured.forEach(function(c) {
-                var img = screenshotSrc(c.link);
+                var img  = screenshotSrc(c.link);
                 var card = document.createElement('a');
-                card.href = 'javascript:void(0)';
+                card.href   = c.link;
+                card.target = '_blank';
+                card.rel    = 'noopener noreferrer';
                 card.className = 'hj-feat-card';
-                card.setAttribute('onclick', "openCaseModal('" + c.id + "')");
                 card.innerHTML =
                     '<div class="hj-feat-img">' +
                         '<img src="' + img + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'assets/hassam.png\'">' +
-                        '<div class="hj-feat-overlay"><span>View Project</span></div>' +
+                        '<div class="hj-feat-overlay"><span>Visit Project ↗</span></div>' +
                     '</div>' +
                     '<div class="hj-feat-body">' +
                         '<div class="hj-feat-cat">' + c.category + '</div>' +
@@ -51,20 +59,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
-        // Regular grid
+        // Regular grid — clicking opens project in new tab
         if (grid) {
             grid.innerHTML = '';
             regular.forEach(function(c) {
-                var img = screenshotSrc(c.link);
-                var arrowSVG =
-                    '<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                        '<path d="M2.26 37.74L37.74 2.26" stroke="white" stroke-width="2" stroke-linecap="round"/>' +
-                        '<path d="M2.26 2.26L37.74 2.26L37.74 37.74" stroke="white" stroke-width="2" stroke-linecap="round"/>' +
-                    '</svg>';
+                var img  = screenshotSrc(c.link);
                 var card = document.createElement('a');
-                card.href = 'javascript:void(0)';
+                card.href   = c.link;
+                card.target = '_blank';
+                card.rel    = 'noopener noreferrer';
                 card.className = 'custom-case-item';
-                card.setAttribute('onclick', "openCaseModal('" + c.id + "')");
                 card.innerHTML =
                     '<div class="custom-case-img">' +
                         '<img src="' + img + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'assets/hassam.png\'">' +
@@ -81,64 +85,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // ── modal ─────────────────────────────────────────────────
-    var modalOverlay = document.getElementById('customModalOverlay');
-    var closeBtn     = document.getElementById('customModalClose');
-    var mTitle       = document.getElementById('modalTitle');
-    var mCat         = document.getElementById('modalCat');
-    var mDesc        = document.getElementById('modalDesc');
-    var mLink        = document.getElementById('modalLink');
-    var mSlides      = document.getElementById('modalSlides');
-    var btnPrev      = document.getElementById('modalPrev');
-    var btnNext      = document.getElementById('modalNext');
-    var currentSlideIdx = 0;
-    var slideImages     = [];
-
-    window.openCaseModal = function(id) {
-        var project = allCases.find(function(c) { return c.id === id; });
-        if (!project) return;
-
-        mTitle.innerText = project.title;
-        mCat.innerText   = project.category;
-        mDesc.innerText  = project.description || '';
-        mLink.href       = project.link;
-
-        mSlides.innerHTML = '';
-        slideImages = (project.images && project.images.length > 0)
-            ? project.images
-            : [screenshotSrc(project.link)];
-        currentSlideIdx = 0;
-
-        slideImages.forEach(function(src, idx) {
-            var img = document.createElement('img');
-            img.src = src;
-            img.onerror = function() { img.src = 'assets/hassam.png'; };
-            if (idx === 0) img.className = 'active';
-            mSlides.appendChild(img);
-        });
-
-        btnPrev.style.display = slideImages.length > 1 ? 'block' : 'none';
-        btnNext.style.display = slideImages.length > 1 ? 'block' : 'none';
-
-        modalOverlay.style.display = 'flex';
-        setTimeout(function() { modalOverlay.classList.add('show'); }, 10);
-    };
-
-    function closeModal() {
-        modalOverlay.classList.remove('show');
-        setTimeout(function() { modalOverlay.style.display = 'none'; }, 300);
-    }
-
-    if (closeBtn)     closeBtn.onclick     = closeModal;
-    if (modalOverlay) modalOverlay.onclick  = function(e) { if (e.target === modalOverlay) closeModal(); };
-    if (btnNext)      btnNext.onclick       = function() { moveSlide(1); };
-    if (btnPrev)      btnPrev.onclick       = function() { moveSlide(-1); };
-
-    function moveSlide(dir) {
-        if (slideImages.length <= 1) return;
-        var imgs = mSlides.querySelectorAll('img');
-        imgs[currentSlideIdx].classList.remove('active');
-        currentSlideIdx = (currentSlideIdx + dir + slideImages.length) % slideImages.length;
-        imgs[currentSlideIdx].classList.add('active');
-    }
 });
