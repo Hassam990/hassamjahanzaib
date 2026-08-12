@@ -1,91 +1,131 @@
 [
   {
-    "id": "1",
+    "id": "maison-wedding",
+    "title": "Maison Wedding Circle",
+    "category": "Wedding / Luxury Brand",
+    "description": "A high-end luxury wedding platform — one of the biggest projects in the portfolio. Full branding, immersive UI design, and complete front-end development for an upscale wedding service brand.",
+    "link": "https://maisonweddingcircle.com/",
+    "images": ["https://api.microlink.io/?url=https://maisonweddingcircle.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "featured": true,
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "synapse",
+    "title": "SYNAPSE — AI GPT Platform",
+    "category": "Full-Stack / AI Platform",
+    "description": "Pakistan's first AI GPT platform — independently coded and built end-to-end by Hassam. Custom GPT API integration, user authentication, chat history, and a sleek modern UI. A personal passion project.",
+    "link": "https://www.synapse-gpt.live/",
+    "images": ["https://api.microlink.io/?url=https://www.synapse-gpt.live&screenshot=true&meta=false&embed=screenshot.url"],
+    "featured": true,
+    "createdAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "us-executive",
+    "title": "US Executive Travel",
+    "category": "Full-Stack / Booking Platform",
+    "description": "Full-stack CMS-driven booking platform for a UK-based taxi and executive travel company. Includes live booking flow, admin dashboard, dynamic fleet listings, and complete branded design.",
+    "link": "https://www.us-executivetravel.com/",
+    "images": ["https://api.microlink.io/?url=https://www.us-executivetravel.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "featured": true,
+    "createdAt": "2024-12-01T00:00:00.000Z"
+  },
+  {
+    "id": "riyadah",
+    "title": "Riyadah Media",
+    "category": "Influencer Agency",
+    "description": "Modern influencer agency website for a global media company. Full design and development — bold visual identity, service pages, testimonials, and lead generation flow.",
+    "link": "https://riyadahmedia.com/",
+    "images": ["https://api.microlink.io/?url=https://riyadahmedia.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2025-03-01T00:00:00.000Z"
+  },
+  {
+    "id": "lhw-carpentry",
+    "title": "LHW Carpentry",
+    "category": "Trades / Carpentry Website",
+    "description": "Professional carpentry and joinery website for a UK-based craftsman with 10 years of experience. Showcases media walls, bespoke wardrobes, staircases, flooring, and more.",
+    "link": "https://lhwcarpentry.com/",
+    "images": ["https://api.microlink.io/?url=https://lhwcarpentry.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2025-02-01T00:00:00.000Z"
+  },
+  {
+    "id": "maison-cotton",
+    "title": "Maison Cottonverse",
+    "category": "Fashion / E-Commerce",
+    "description": "A purposeful fashion brand website — 50% of profits support a charitable mission. Elegant product-focused design with a social impact story woven throughout the experience.",
+    "link": "https://maisoncottonverse.com/",
+    "images": ["https://api.microlink.io/?url=https://maisoncottonverse.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-11-01T00:00:00.000Z"
+  },
+  {
+    "id": "pixels-perfect",
     "title": "Pixels Perfect Creation",
     "category": "Marketing Agency",
-    "description": "A comprehensive marketing agency website built with performance and design in mind.",
-    "link": "http://pixelsperfectcreation.co.uk/",
-    "images": [
-      "assets/bruce.jpg"
-    ],
-    "createdAt": "2024-01-01T00:00:00.000Z",
-    "updatedAt": "2026-03-08T11:33:19.693Z"
+    "description": "Full website for Pixels Perfect Creation — a UK-based design and marketing agency. Logo design, branding kits, social media packages, and web development service pages.",
+    "link": "https://pixelsperfectcreation.co.uk/",
+    "images": ["https://api.microlink.io/?url=https://pixelsperfectcreation.co.uk&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-06-01T00:00:00.000Z"
   },
   {
-    "id": "2",
-    "title": "Atlanta True Cars",
-    "category": "Cars Selling Web",
-    "description": "An interactive and engaging platform for buying and selling cars in Atlanta.",
-    "link": "https://atlantatruecars.com/",
-    "images": [
-      "assets/at.jpg"
-    ],
-    "createdAt": "2024-01-02T00:00:00.000Z"
+    "id": "fortified-fencing",
+    "title": "Fortified Fencing",
+    "category": "Trades / Landscaping",
+    "description": "Professional fencing and landscaping business website. From free quote to installation — clean service layout, trust-building sections, and strong CTA flow.",
+    "link": "https://fortifiedfencing.co.uk/",
+    "images": ["https://api.microlink.io/?url=https://fortifiedfencing.co.uk&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-10-01T00:00:00.000Z"
   },
   {
-    "id": "3",
+    "id": "cotswold-elite",
+    "title": "Cotswold Elite",
+    "category": "Heritage / Bespoke Carpentry",
+    "description": "Premium heritage property restoration and bespoke carpentry website based in the Cotswolds. Over 20 years of craftsmanship — conservation, restoration, and expansion of heritage properties.",
+    "link": "https://cotswoldelite.co.uk/",
+    "images": ["https://api.microlink.io/?url=https://cotswoldelite.co.uk&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "zargham-tech",
+    "title": "Zargham Tech",
+    "category": "Event Technical Services",
+    "description": "Corporate website for Syed Zargam Technical Services LLC — UAE event production and technical manpower company. Empowering technical excellence with skilled professionals.",
+    "link": "https://zarghamtech.com/",
+    "images": ["https://api.microlink.io/?url=https://zarghamtech.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-08-01T00:00:00.000Z"
+  },
+  {
+    "id": "af-global",
+    "title": "AF Web Global",
+    "category": "Digital Agency",
+    "description": "Premium web and design solutions agency website. High-performance development, creative branding, and scalable corporate portals — built to global standards.",
+    "link": "http://afwebglobal.co.uk/",
+    "images": ["https://api.microlink.io/?url=http://afwebglobal.co.uk&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-07-01T00:00:00.000Z"
+  },
+  {
+    "id": "ch-legal",
     "title": "CH Legal Solutions",
     "category": "Law Firm",
-    "description": "Professional and trustworthy web presence for a law firm.",
+    "description": "Georgia-based immigration, family and divorce law firm website. Professional and trustworthy web presence for attorney Urwah Ahmed. Immigration, family law, and personal injury services.",
     "link": "https://chlegalsolutions.com/",
-    "images": [
-      "assets/ch.jpg"
-    ],
-    "createdAt": "2024-01-03T00:00:00.000Z"
+    "images": ["https://api.microlink.io/?url=https://chlegalsolutions.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-03-01T00:00:00.000Z"
   },
   {
-    "id": "4",
-    "title": "Anime",
-    "category": "Website Design",
-    "description": "A visually stunning streaming layout designed for anime enthusiasts.",
-    "link": "https://hassam990.github.io/live-index/",
-    "images": [
-      "assets/anime.jpg"
-    ],
-    "createdAt": "2024-01-04T00:00:00.000Z"
+    "id": "ss-consultant",
+    "title": "SS Consultant",
+    "category": "Business Consulting",
+    "description": "Responsive business website for a Pakistan-based consulting firm. Clean UI, branded visuals, and professional service pages built for credibility and lead generation.",
+    "link": "https://www.ssconsultant.com.pk/",
+    "images": ["https://api.microlink.io/?url=https://www.ssconsultant.com.pk&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-04-01T00:00:00.000Z"
   },
   {
-    "id": "5",
-    "title": "A&B Joinery",
-    "category": "Joinery Website",
-    "description": "Showcase of custom woodwork and joinery projects.",
-    "link": "https://abjoineryfalkirk.com/",
-    "images": [
-      "assets/A&b.jpg"
-    ],
-    "createdAt": "2024-01-05T00:00:00.000Z"
-  },
-  {
-    "id": "6",
-    "title": "Spline 3D",
-    "category": "Portfolio",
-    "description": "An interactive 3D web experience built with Spline.",
-    "link": "https://hassam990.github.io/Splinetest/",
-    "images": [
-      "assets/spline.jpg"
-    ],
-    "createdAt": "2024-01-06T00:00:00.000Z"
-  },
-  {
-    "id": "7",
-    "title": "Behance",
-    "category": "Portfolio",
-    "description": "Link to my official Behance design portfolio.",
-    "link": "https://www.behance.net/hassam99",
-    "images": [
-      "assets/b1.jpg"
-    ],
-    "createdAt": "2024-01-07T00:00:00.000Z"
-  },
-  {
-    "id": "145936af-bc43-443c-8fb0-c99f2c19e425",
-    "title": "TEst",
-    "category": "TEst",
-    "description": "TEst",
-    "link": "https://ssconsultant.com.pk/",
-    "images": [
-      "uploads/1772970727533-68667097.png"
-    ],
-    "createdAt": "2026-03-08T11:52:07.538Z"
+    "id": "celestially-penned",
+    "title": "Celestially Penned",
+    "category": "Creative / Writing Brand",
+    "description": "Brand website for a creative writing and content brand. Elegant design, strong typographic identity, and a clean layout built to reflect the brand's poetic voice.",
+    "link": "https://celestiallypenned.com/",
+    "images": ["https://api.microlink.io/?url=https://celestiallypenned.com&screenshot=true&meta=false&embed=screenshot.url"],
+    "createdAt": "2024-05-01T00:00:00.000Z"
   }
 ]
