@@ -1,0 +1,1 @@
+﻿import{g as i}from"./main-App.js";import"./main.js";class p{constructor(r,n,a){let o=$(".page-screen"),e={number:0},s=i.timeline({defaults:{duration:1,ease:"power2",stagger:.04},onStart:()=>r(a)});const t=()=>{o.css("--cliping",`${e.number}%`)};t(),s.to(e,{number:100,onUpdate:t,duration:1},n)}}export{p as default};
